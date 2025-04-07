@@ -8,9 +8,21 @@
                 <meta charset="utf-8" />
                 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<<<<<<< HEAD
                 <meta name="description" content="Son IT - Dự án laptopshop" />
                 <meta name="author" content="Son IT" />
                 <title>Create User - Son IT</title>
+=======
+<<<<<<< HEAD
+                <meta name="description" content="Hỏi Dân IT - Dự án laptopshop" />
+                <meta name="author" content="Hỏi Dân IT" />
+                <title>Create User - Hỏi Dân IT</title>
+=======
+                <meta name="description" content="Son IT - Dự án laptopshop" />
+                <meta name="author" content="Son IT" />
+                <title>Create User - Son IT</title>
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                 <link href="/css/styles.css" rel="stylesheet" />
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
                 <script>

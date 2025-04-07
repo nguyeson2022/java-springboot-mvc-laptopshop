@@ -74,7 +74,16 @@
                                         <div class="col-lg-6">
                                             <div class="border rounded">
                                                 <a href="#">
+<<<<<<< HEAD
                                                     <img src="${product.image}" class="img-fluid rounded" alt="Image">
+=======
+<<<<<<< HEAD
+                                                    <img src="/images/product/${product.image}"
+                                                        class="img-fluid rounded" alt="Image">
+=======
+                                                    <img src="${product.image}" class="img-fluid rounded" alt="Image">
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                                                 </a>
                                             </div>
                                         </div>
@@ -193,6 +202,12 @@
                                     </div>
                                 </div>
                             </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                             <h1 class="fw-bold mb-0">Sản phẩm liên quan</h1>
                             <div class="vesitable">
                                 <div class="owl-carousel vegetable-carousel justify-content-center">
@@ -223,6 +238,10 @@
 
                                 </div>
                             </div>
+<<<<<<< HEAD
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                         </div>
                     </div>
                     <!-- Single Product End -->

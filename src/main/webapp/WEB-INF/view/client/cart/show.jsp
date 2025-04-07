@@ -37,7 +37,14 @@
                     <link href="/client/css/style.css" rel="stylesheet">
                 </head>
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                 <body>
 
                     <!-- Spinner Start -->
@@ -85,14 +92,31 @@
                                             <tr>
                                                 <th scope="row">
                                                     <div class="d-flex align-items-center">
+<<<<<<< HEAD
                                                         <img src="${cartDetail.product.image}"
+=======
+<<<<<<< HEAD
+                                                        <img src="/images/product/${cartDetail.product.image}"
+=======
+                                                        <img src="${cartDetail.product.image}"
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                                                             class="img-fluid me-5 rounded-circle"
                                                             style="width: 80px; height: 80px;" alt="">
                                                     </div>
                                                 </th>
                                                 <td>
+<<<<<<< HEAD
                                                     <p class="mb-0 mt-4 text-truncate"
                                                         style="width: 270px; white-space: nowrap; overflow: hidden;">
+=======
+<<<<<<< HEAD
+                                                    <p class="mb-0 mt-4">
+=======
+                                                    <p class="mb-0 mt-4 text-truncate"
+                                                        style="width: 270px; white-space: nowrap; overflow: hidden;">
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                                                         <a href="/product/${cartDetail.product.id}" target="_blank">
                                                             ${cartDetail.product.name}
                                                         </a>

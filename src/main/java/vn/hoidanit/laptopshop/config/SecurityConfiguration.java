@@ -32,6 +32,19 @@ public class SecurityConfiguration {
     }
 
     @Bean
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    public DaoAuthenticationProvider authProvider(PasswordEncoder passwordEncoder,
+            UserDetailsService userDetailsService) {
+
+        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
+        authProvider.setUserDetailsService(userDetailsService);
+        authProvider.setPasswordEncoder(passwordEncoder);
+        authProvider.setHideUserNotFoundExceptions(false);
+
+=======
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     public DaoAuthenticationProvider authProvider(
             PasswordEncoder passwordEncoder,
             UserDetailsService userDetailsService) {
@@ -39,6 +52,10 @@ public class SecurityConfiguration {
         authProvider.setUserDetailsService(userDetailsService);
         authProvider.setPasswordEncoder(passwordEncoder);
         // authProvider.setHideUserNotFoundExceptions(false);
+<<<<<<< HEAD
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
         return authProvider;
     }
 
@@ -52,8 +69,18 @@ public class SecurityConfiguration {
         SpringSessionRememberMeServices rememberMeServices = new SpringSessionRememberMeServices();
         // optionally customize
         rememberMeServices.setAlwaysRemember(true);
+<<<<<<< HEAD
 
         return rememberMeServices;
+=======
+<<<<<<< HEAD
+        return rememberMeServices;
+
+=======
+
+        return rememberMeServices;
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     }
 
     @Bean
@@ -61,12 +88,24 @@ public class SecurityConfiguration {
         // v6. lamda
         http
                 .authorizeHttpRequests(authorize -> authorize
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                        .dispatcherTypeMatchers(DispatcherType.FORWARD, DispatcherType.INCLUDE).permitAll()
+                        .requestMatchers("/", "/login",
+                                "product/**", "/client/**", "/css/**", "/js/**", "/images/**")
+=======
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                         .dispatcherTypeMatchers(DispatcherType.FORWARD,
                                 DispatcherType.INCLUDE)
                         .permitAll()
 
                         .requestMatchers("/", "/login", "/product/**", "/register", "/products/**",
                                 "/client/**", "/css/**", "/js/**", "/images/**")
+<<<<<<< HEAD
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                         .permitAll()
 
                         .requestMatchers("/admin/**").hasRole("ADMIN")
@@ -81,7 +120,16 @@ public class SecurityConfiguration {
 
                 .logout(logout -> logout.deleteCookies("JSESSIONID").invalidateHttpSession(true))
 
+<<<<<<< HEAD
                 .rememberMe(r -> r.rememberMeServices(rememberMeServices()))
+=======
+<<<<<<< HEAD
+                .rememberMe(r -> r.rememberMeServices(
+                        rememberMeServices()))
+=======
+                .rememberMe(r -> r.rememberMeServices(rememberMeServices()))
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                 .formLogin(formLogin -> formLogin
                         .loginPage("/login")
                         .failureUrl("/login?error")

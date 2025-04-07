@@ -1,7 +1,15 @@
 package vn.hoidanit.laptopshop.domain;
 
+<<<<<<< HEAD
 import java.io.Serializable;
 
+=======
+<<<<<<< HEAD
+=======
+import java.io.Serializable;
+
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,10 +23,20 @@ import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "products")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+public class Product {
+=======
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 public class Product implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+<<<<<<< HEAD
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -30,12 +48,26 @@ public class Product implements Serializable {
     @NotNull
     @DecimalMin(value = "0", inclusive = false, message = "Price phải lớn hơn 0")
     private double price;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     private String image;
 
     @NotNull
     @NotEmpty(message = "detailDesc không được để trống")
     @Column(columnDefinition = "MEDIUMTEXT")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     private String detailDesc;
 
     @NotNull
@@ -44,8 +76,17 @@ public class Product implements Serializable {
 
     @NotNull
     @Min(value = 1, message = "Số lượng cần lớn hơn hoặc bằng 1")
+<<<<<<< HEAD
     private int quantity;
 
+=======
+<<<<<<< HEAD
+    private long quantity;
+=======
+    private int quantity;
+
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     private long sold;
     private String factory;
     private String target;
@@ -98,11 +139,25 @@ public class Product implements Serializable {
         this.shortDesc = shortDesc;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    public long getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(long quantity) {
+=======
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     public int getQuantity() {
         return quantity;
     }
 
     public void setQuantity(int quantity) {
+<<<<<<< HEAD
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
         this.quantity = quantity;
     }
 

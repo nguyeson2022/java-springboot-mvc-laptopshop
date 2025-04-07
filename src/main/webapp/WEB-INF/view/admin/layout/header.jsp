@@ -8,6 +8,15 @@
                     class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+                <span style="color: white;">Welcome, Hỏi Dân IT</span>
+
+
+=======
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                 <span style="color: white;">Welcome,
                     <%=request.getUserPrincipal().getName().toString()%>
 
@@ -18,6 +27,10 @@
     <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i
             class="fas fa-search"></i></button>
 </div> -->
+<<<<<<< HEAD
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
             </form>
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
@@ -26,6 +39,16 @@
                         data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#!">Settings</a></li>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+=======
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 
                         <li>
                             <hr class="dropdown-divider" />
@@ -36,6 +59,10 @@
                                 <button class="dropdown-item">Logout</button>
                             </form>
                         </li>
+<<<<<<< HEAD
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                     </ul>
                 </li>
             </ul>

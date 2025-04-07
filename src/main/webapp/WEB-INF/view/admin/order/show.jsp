@@ -9,9 +9,21 @@
                 <meta charset="utf-8" />
                 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<<<<<<< HEAD
                 <meta name="description" content="Son IT - Dự án laptopshop" />
                 <meta name="author" content="Son IT" />
                 <title>Manager Orders - Son IT</title>
+=======
+<<<<<<< HEAD
+                <meta name="description" content="Hỏi Dân IT - Dự án laptopshop" />
+                <meta name="author" content="Hỏi Dân IT" />
+                <title>Manager Orders - Hỏi Dân IT</title>
+=======
+                <meta name="description" content="Son IT - Dự án laptopshop" />
+                <meta name="author" content="Son IT" />
+                <title>Manager Orders - Son IT</title>
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                 <link href="/css/styles.css" rel="stylesheet" />
                 <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
             </head>
@@ -54,9 +66,19 @@
                                                                 <fmt:formatNumber type="number"
                                                                     value="${order.totalPrice}" /> đ
                                                             </td>
+<<<<<<< HEAD
                                                             <td class="text-truncate"
                                                                 style="width: 270px; white-space: nowrap; overflow: hidden;">
                                                                 ${order.user.fullName}</td>
+=======
+<<<<<<< HEAD
+                                                            <td>${order.user.fullName}</td>
+=======
+                                                            <td class="text-truncate"
+                                                                style="width: 270px; white-space: nowrap; overflow: hidden;">
+                                                                ${order.user.fullName}</td>
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                                                             <td>${order.status}</td>
                                                             <td>
                                                                 <a href="/admin/order/${order.id}"

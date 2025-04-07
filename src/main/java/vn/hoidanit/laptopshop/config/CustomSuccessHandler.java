@@ -24,6 +24,13 @@ public class CustomSuccessHandler implements AuthenticationSuccessHandler {
 
     @Autowired
     private UserService userService;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 
     protected String determineTargetUrl(final Authentication authentication) {
 
@@ -48,39 +55,85 @@ public class CustomSuccessHandler implements AuthenticationSuccessHandler {
             return;
         }
         session.removeAttribute(WebAttributes.AUTHENTICATION_EXCEPTION);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        // get email
+        String email = authentication.getName();
+        // get user
+        User user = this.userService.getUserByEmail(email);
+        if (user != null) {
+=======
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
         // get email
         String email = authentication.getName();
         // query user
         User user = this.userService.getUserByEmail(email);
         if (user != null) {
             session.setAttribute("user", user);
+<<<<<<< HEAD
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
             session.setAttribute("fullName", user.getFullName());
             session.setAttribute("avatar", user.getAvatar());
             session.setAttribute("id", user.getId());
             session.setAttribute("email", user.getEmail());
             int sum = user.getCart() == null ? 0 : user.getCart().getSum();
             session.setAttribute("sum", sum);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
         }
 
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    @Override
+    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
+            Authentication authentication) throws IOException, ServletException {
+        // TODO Auto-generated method stub
+=======
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
             Authentication authentication) throws IOException, ServletException {
 
+<<<<<<< HEAD
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
         String targetUrl = determineTargetUrl(authentication);
 
         if (response.isCommitted()) {
 
             return;
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        redirectStrategy.sendRedirect(request, response, targetUrl);
+        clearAuthenticationAttributes(request, authentication);
+=======
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 
         redirectStrategy.sendRedirect(request, response, targetUrl);
         clearAuthenticationAttributes(request, authentication);
 
+<<<<<<< HEAD
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     }
 
 }

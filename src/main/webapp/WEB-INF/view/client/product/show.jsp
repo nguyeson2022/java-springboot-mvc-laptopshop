@@ -41,6 +41,12 @@
                             pointer-events: none;
                             background-color: var(--bs-pagination-disabled-bg);
                         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    </style>
+=======
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 
                         .truncate-multiline {
                             display: -webkit-box;
@@ -116,6 +122,10 @@
                         }
 
                     </script>
+<<<<<<< HEAD
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                 </head>
 
                 <body>
@@ -142,6 +152,12 @@
                                         </ol>
                                     </nav>
                                 </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                                 <!-- Form tìm kiếm -->
                                 <form id="searchForm" action="search.jsp" method="GET">
                                     <div class="input-group">
@@ -152,6 +168,10 @@
                                         </button>
                                     </div>
                                 </form>
+<<<<<<< HEAD
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                                 <div class="row g-4 fruite">
                                     <div class="col-12 col-md-4">
                                         <div class="row g-4">
@@ -293,7 +313,15 @@
                                                 <div class="col-md-6 col-lg-4">
                                                     <div class="rounded position-relative fruite-item">
                                                         <div class="fruite-img">
+<<<<<<< HEAD
                                                             <img src="${product.image}"
+=======
+<<<<<<< HEAD
+                                                            <img src="/images/product/${product.image}"
+=======
+                                                            <img src="${product.image}"
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                                                                 class="img-fluid w-100 rounded-top" alt="">
                                                         </div>
                                                         <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
@@ -301,13 +329,29 @@
                                                         </div>
                                                         <div
                                                             class="p-4 border border-secondary border-top-0 rounded-bottom">
+<<<<<<< HEAD
                                                             <h4 style="font-size: 15px;" class="truncate-multiline">
+=======
+<<<<<<< HEAD
+                                                            <h4 style="font-size: 15px;">
+=======
+                                                            <h4 style="font-size: 15px;" class="truncate-multiline">
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                                                                 <a href="/product/${product.id}">
                                                                     ${product.name}
                                                                 </a>
 
                                                             </h4>
+<<<<<<< HEAD
                                                             <p style="font-size: 13px;" class="truncate-multiline">
+=======
+<<<<<<< HEAD
+                                                            <p style="font-size: 13px;">
+=======
+                                                            <p style="font-size: 13px;" class="truncate-multiline">
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                                                                 ${product.shortDesc}</p>
                                                             <div
                                                                 class="d-flex  flex-lg-wrap justify-content-center flex-column">

@@ -3,10 +3,19 @@ package vn.hoidanit.laptopshop.controller.client;
 import java.util.ArrayList;
 import java.util.List;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+<<<<<<< HEAD
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,9 +29,19 @@ import jakarta.servlet.http.HttpSession;
 import vn.hoidanit.laptopshop.domain.Cart;
 import vn.hoidanit.laptopshop.domain.CartDetail;
 import vn.hoidanit.laptopshop.domain.Product;
+<<<<<<< HEAD
 import vn.hoidanit.laptopshop.domain.Product_;
 import vn.hoidanit.laptopshop.domain.User;
 import vn.hoidanit.laptopshop.domain.dto.ProductCriteriaDTO;
+=======
+<<<<<<< HEAD
+import vn.hoidanit.laptopshop.domain.User;
+=======
+import vn.hoidanit.laptopshop.domain.Product_;
+import vn.hoidanit.laptopshop.domain.User;
+import vn.hoidanit.laptopshop.domain.dto.ProductCriteriaDTO;
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 import vn.hoidanit.laptopshop.service.ProductService;
 
 @Controller
@@ -35,6 +54,13 @@ public class ItemController {
     }
 
     @GetMapping("/product/{id}")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     public String getProductPage(Model model, @PathVariable long id) {
         Product pr = this.productService.fetchProductById(id).get();
         model.addAttribute("product", pr);
@@ -43,25 +69,60 @@ public class ItemController {
     }
 
     @PostMapping("/add-product-to-cart/{id}")
+<<<<<<< HEAD
     public String addProductToCart(@PathVariable long id, HttpServletRequest request) {
+=======
+<<<<<<< HEAD
+
+    public String addProductToCart(Model model, @PathVariable long id, HttpServletRequest request) {
+=======
+    public String addProductToCart(@PathVariable long id, HttpServletRequest request) {
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
         HttpSession session = request.getSession(false);
 
         long productId = id;
         String email = (String) session.getAttribute("email");
+<<<<<<< HEAD
 
         this.productService.handleAddProductToCart(email, productId, session, 1);
 
+=======
+<<<<<<< HEAD
+        this.productService.handleAddProductToCart(email, productId, session, 1);
+=======
+
+        this.productService.handleAddProductToCart(email, productId, session, 1);
+
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
         return "redirect:/";
     }
 
     @GetMapping("/cart")
     public String getCartPage(Model model, HttpServletRequest request) {
+<<<<<<< HEAD
         User currentUser = new User();// null
+=======
+<<<<<<< HEAD
+        User currentUser = new User();
+=======
+        User currentUser = new User();// null
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
         HttpSession session = request.getSession(false);
         long id = (long) session.getAttribute("id");
         currentUser.setId(id);
 
+<<<<<<< HEAD
         Cart cart = this.productService.fetchByUser(currentUser);
+=======
+<<<<<<< HEAD
+        Cart cart = this.productService.fecthByUser(currentUser);
+=======
+        Cart cart = this.productService.fetchByUser(currentUser);
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 
         List<CartDetail> cartDetails = cart == null ? new ArrayList<CartDetail>() : cart.getCartDetails();
 
@@ -74,12 +135,26 @@ public class ItemController {
         model.addAttribute("totalPrice", totalPrice);
 
         model.addAttribute("cart", cart);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
         return "client/cart/show";
     }
 
     @PostMapping("/delete-cart-product/{id}")
     public String deleteCartDetail(@PathVariable long id, HttpServletRequest request) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        // TODO: process POST request
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
         HttpSession session = request.getSession(false);
         long cartDetailId = id;
         this.productService.handleRemoveCartDetail(cartDetailId, session);
@@ -93,7 +168,15 @@ public class ItemController {
         long id = (long) session.getAttribute("id");
         currentUser.setId(id);
 
+<<<<<<< HEAD
         Cart cart = this.productService.fetchByUser(currentUser);
+=======
+<<<<<<< HEAD
+        Cart cart = this.productService.fecthByUser(currentUser);
+=======
+        Cart cart = this.productService.fetchByUser(currentUser);
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 
         List<CartDetail> cartDetails = cart == null ? new ArrayList<CartDetail>() : cart.getCartDetails();
 
@@ -120,14 +203,31 @@ public class ItemController {
             HttpServletRequest request,
             @RequestParam("receiverName") String receiverName,
             @RequestParam("receiverAddress") String receiverAddress,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            @RequestParam("receiverPhone") String receiverPhone) {
+        User currentUser = new User();// null
+=======
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
             @RequestParam("receiverPhone") String receiverPhone,
             @RequestParam("selectedItems") String selectedItems) {
 
         User currentUser = new User();
+<<<<<<< HEAD
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
         HttpSession session = request.getSession(false);
         long id = (long) session.getAttribute("id");
         currentUser.setId(id);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        this.productService.handlePlaceOrder(currentUser, session, receiverName, receiverAddress, receiverPhone);
+=======
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
         // Parse selected item IDs
         List<Long> selectedItemIds = new ArrayList<>();
         if (selectedItems != null && !selectedItems.isEmpty()) {
@@ -139,6 +239,10 @@ public class ItemController {
 
         this.productService.handlePlaceOrder(currentUser, session, receiverName,
                 receiverAddress, receiverPhone, selectedItemIds);
+<<<<<<< HEAD
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 
         return "redirect:/thanks";
     }
@@ -161,6 +265,11 @@ public class ItemController {
         return "redirect:/product/" + id;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     @GetMapping("/products")
     public String getProductPage(Model model,
             ProductCriteriaDTO productCriteriaDTO,
@@ -208,4 +317,8 @@ public class ItemController {
         return "client/product/show";
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 }

@@ -1,12 +1,26 @@
 package vn.hoidanit.laptopshop.service;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
+=======
+<<<<<<< HEAD
+=======
+import java.util.ArrayList;
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+<<<<<<< HEAD
 import org.springframework.data.jpa.domain.Specification;
+=======
+<<<<<<< HEAD
+=======
+import org.springframework.data.jpa.domain.Specification;
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 import org.springframework.stereotype.Service;
 
 import jakarta.servlet.http.HttpSession;
@@ -16,13 +30,27 @@ import vn.hoidanit.laptopshop.domain.Order;
 import vn.hoidanit.laptopshop.domain.OrderDetail;
 import vn.hoidanit.laptopshop.domain.Product;
 import vn.hoidanit.laptopshop.domain.User;
+<<<<<<< HEAD
 import vn.hoidanit.laptopshop.domain.dto.ProductCriteriaDTO;
+=======
+<<<<<<< HEAD
+=======
+import vn.hoidanit.laptopshop.domain.dto.ProductCriteriaDTO;
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 import vn.hoidanit.laptopshop.repository.CartDetailRepository;
 import vn.hoidanit.laptopshop.repository.CartRepository;
 import vn.hoidanit.laptopshop.repository.OrderDetailRepository;
 import vn.hoidanit.laptopshop.repository.OrderRepository;
 import vn.hoidanit.laptopshop.repository.ProductRepository;
+<<<<<<< HEAD
 import vn.hoidanit.laptopshop.service.specification.ProductSpecs;
+=======
+<<<<<<< HEAD
+=======
+import vn.hoidanit.laptopshop.service.specification.ProductSpecs;
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 
 @Service
 public class ProductService {
@@ -56,6 +84,11 @@ public class ProductService {
         return this.productRepository.findAll(page);
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     public Page<Product> fetchProductsWithSpec(Pageable page, ProductCriteriaDTO productCriteriaDTO) {
         if (productCriteriaDTO.getTarget() == null
                 && productCriteriaDTO.getFactory() == null
@@ -118,6 +151,10 @@ public class ProductService {
         return combinedSpec;
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     public Optional<Product> fetchProductById(long id) {
         return this.productRepository.findById(id);
     }
@@ -175,7 +212,15 @@ public class ProductService {
         }
     }
 
+<<<<<<< HEAD
     public Cart fetchByUser(User user) {
+=======
+<<<<<<< HEAD
+    public Cart fecthByUser(User user) {
+=======
+    public Cart fetchByUser(User user) {
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
         return this.cartRepository.findByUser(user);
     }
 
@@ -212,6 +257,26 @@ public class ProductService {
                 this.cartDetailRepository.save(currentCartDetail);
             }
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    }
+
+    public void handlePlaceOrder(
+            User user, HttpSession session,
+            String receiverName, String receiverAddress, String receiverPhone) {
+
+        // step 1: get cart by user
+        Cart cart = this.cartRepository.findByUser(user);
+        if (cart != null) {
+            List<CartDetail> cartDetails = cart.getCartDetails();
+
+            if (cartDetails != null) {
+
+                // create order
+=======
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     }
 
     // 3. Modify your Service to handle selected items
@@ -235,6 +300,10 @@ public class ProductService {
                 }
 
                 // Create order with selected items only
+<<<<<<< HEAD
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                 Order order = new Order();
                 order.setUser(user);
                 order.setReceiverName(receiverName);
@@ -243,14 +312,35 @@ public class ProductService {
                 order.setStatus("PENDING");
 
                 double sum = 0;
+<<<<<<< HEAD
                 for (CartDetail cd : selectedCartDetails) {
                     sum += cd.getPrice() * cd.getQuantity();
+=======
+<<<<<<< HEAD
+                for (CartDetail cd : cartDetails) {
+                    sum += cd.getPrice();
+=======
+                for (CartDetail cd : selectedCartDetails) {
+                    sum += cd.getPrice() * cd.getQuantity();
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                 }
                 order.setTotalPrice(sum);
                 order = this.orderRepository.save(order);
 
+<<<<<<< HEAD
                 // Create orderDetail for selected items
                 for (CartDetail cd : selectedCartDetails) {
+=======
+<<<<<<< HEAD
+                // create orderDetail
+
+                for (CartDetail cd : cartDetails) {
+=======
+                // Create orderDetail for selected items
+                for (CartDetail cd : selectedCartDetails) {
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                     OrderDetail orderDetail = new OrderDetail();
                     orderDetail.setOrder(order);
                     orderDetail.setProduct(cd.getProduct());
@@ -260,6 +350,23 @@ public class ProductService {
                     this.orderDetailRepository.save(orderDetail);
                 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                // step 2: delete cart_detail and cart
+                for (CartDetail cd : cartDetails) {
+                    this.cartDetailRepository.deleteById(cd.getId());
+                }
+
+                this.cartRepository.deleteById(cart.getId());
+
+                // step 3 : update session
+                session.setAttribute("sum", 0);
+            }
+        }
+
+=======
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                 // Delete only the selected cart details
                 for (CartDetail cd : selectedCartDetails) {
                     this.cartDetailRepository.deleteById(cd.getId());
@@ -284,5 +391,9 @@ public class ProductService {
                 }
             }
         }
+<<<<<<< HEAD
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     }
 }

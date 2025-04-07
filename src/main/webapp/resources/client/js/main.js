@@ -127,6 +127,11 @@
         $('#videoModal').on('hide.bs.modal', function (e) {
             $("#video").attr('src', $videoSrc);
         })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 
         //add active class to header
         const navElement = $("#navbarCollapse");
@@ -141,11 +146,23 @@
                 link.removeClass('active'); // Remove 'active' class if the href does not match
             }
         });
+<<<<<<< HEAD
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     });
 
 
 
+<<<<<<< HEAD
     // Product Quantity
+=======
+<<<<<<< HEAD
+    // // Product Quantity
+=======
+    // Product Quantity
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     // $('.quantity button').on('click', function () {
     //     var button = $(this);
     //     var oldValue = button.parent().parent().find('input').val();
@@ -221,7 +238,14 @@
             });
         }
     });
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     function formatCurrency(value) {
         // Use the 'vi-VN' locale to format the number according to Vietnamese currency format
         // and 'VND' as the currency type for Vietnamese đồng
@@ -235,6 +259,11 @@
         formatted = formatted.replace(/\./g, ',');
         return formatted;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 
     //handle filter products
     $('#btnFilter').click(function (event) {
@@ -430,5 +459,9 @@
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 1e88762 (init)
+>>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 })(jQuery);
 
