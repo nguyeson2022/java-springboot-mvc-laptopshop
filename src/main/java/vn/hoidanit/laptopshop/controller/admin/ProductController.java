@@ -17,32 +17,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import jakarta.validation.Valid;
-import vn.hoidanit.laptopshop.domain.Product;<<<<<<<HEAD=======<<<<<<<HEAD
-
-=======>>>>>>>1e88762(init)>>>>>>>26f b06ea67b696853ab5441d14377c072f8cfea7
+import vn.hoidanit.laptopshop.domain.Product;
 import vn.hoidanit.laptopshop.service.ProductService;
 import vn.hoidanit.laptopshop.service.UploadService;
 
 @Controller
 public class ProductController {
-    <<<<<<<HEAD=======<<<<<<<HEAD
     private final UploadService uploadService;
     private final ProductService productService;
 
     public ProductController(UploadService uploadService, ProductService productService) {
-=======
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
-
-    private final UploadService uploadService;
-    private final ProductService productService;
-
-    public ProductController(
-            UploadService uploadService,
-            ProductService productService) {
-<<<<<<< HEAD
-=======
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
         this.uploadService = uploadService;
         this.productService = productService;
     }
@@ -54,21 +38,16 @@ public class ProductController {
         int page = 1;
         try {
             if (pageOptional.isPresent()) {
-                // convert from String to int
                 page = Integer.parseInt(pageOptional.get());
-            } else {
-                // page = 1
             }
         } catch (Exception e) {
             // page = 1
-            // TODO: handle exception
         }
 
         Pageable pageable = PageRequest.of(page - 1, 5);
         Page<Product> prs = this.productService.fetchProducts(pageable);
         List<Product> listProducts = prs.getContent();
         model.addAttribute("products", listProducts);
-
         model.addAttribute("currentPage", page);
         model.addAttribute("totalPages", prs.getTotalPages());
 
@@ -82,46 +61,16 @@ public class ProductController {
     }
 
     @PostMapping("/admin/product/create")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    public String handlCreateProduct(
-            @ModelAttribute("newProduct") @Valid Product pr, BindingResult newProductBindingResult,
-            @RequestParam("hoidanitFile") MultipartFile file) {
-
-        // validate
-        if (newProductBindingResult.hasErrors()) {
-            return "/admin/product/create";
-=======
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
-
     public String handleCreateProduct(
             @ModelAttribute("newProduct") @Valid Product pr,
             BindingResult newProductBindingResult,
             @RequestParam("hoidanitFile") MultipartFile file) {
-        // validate
         if (newProductBindingResult.hasErrors()) {
             return "admin/product/create";
-<<<<<<< HEAD
-=======
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
         }
 
-        // upload image
         String image = this.uploadService.handleSaveUploadFile(file, "product");
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
         pr.setImage(image);
-
-        // save
-        this.productService.createProduct(pr);
-=======
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
-        pr.setImage(image);
-
         this.productService.createProduct(pr);
 
         return "redirect:/admin/product";
@@ -135,18 +84,17 @@ public class ProductController {
     }
 
     @PostMapping("/admin/product/update")
-    public String handleUpdateProduct(@ModelAttribute("newProduct") @Valid Product pr,
+    public String handleUpdateProduct(
+            @ModelAttribute("newProduct") @Valid Product pr,
             BindingResult newProductBindingResult,
             @RequestParam("hoidanitFile") MultipartFile file) {
 
-        // validate
         if (newProductBindingResult.hasErrors()) {
             return "admin/product/update";
         }
 
         Product currentProduct = this.productService.fetchProductById(pr.getId()).get();
         if (currentProduct != null) {
-            // update new image
             if (!file.isEmpty()) {
                 String img = this.uploadService.handleSaveUploadFile(file, "product");
                 currentProduct.setImage(img);
@@ -162,25 +110,12 @@ public class ProductController {
 
             this.productService.createProduct(currentProduct);
         }
-
-<<<<<<< HEAD
-=======
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
         return "redirect:/admin/product";
     }
 
     @GetMapping("/admin/product/delete/{id}")
     public String getDeleteProductPage(Model model, @PathVariable long id) {
         model.addAttribute("id", id);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        // User user = new User();
-        // user.setId(id);
-=======
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
         model.addAttribute("newProduct", new Product());
         return "admin/product/delete";
     }
@@ -197,40 +132,5 @@ public class ProductController {
         model.addAttribute("product", pr);
         model.addAttribute("id", id);
         return "admin/product/detail";
-    }<<<<<<<HEAD=======<<<<<<<HEAD
-
-    @GetMapping("/admin/product/update/{id}")
-
-    public String getUpdateProductPage(Model model, @PathVariable long id) {
-        Optional<Product> currentProduct = this.productService.fetchProductById(id);
-        model.addAttribute("newProduct", currentProduct.get());
-        return "admin/product/update";
     }
-
-    @PostMapping("/admin/product/update")
-    public String handleUpdateProduct(Model model, @ModelAttribute("newProduct") @Valid Product pr,
-            BindingResult newProductBindingResult, @RequestParam("hoidanitFile") MultipartFile file) {
-
-        if (newProductBindingResult.hasErrors()) {
-            return "admin/product/update";
-        }
-        Product currentProduct = this.productService.fetchProductById(pr.getId()).get();
-        if (currentProduct != null) {
-            // update new image
-            if (!file.isEmpty()) {
-                String img = this.uploadService.handleSaveUploadFile(file, "product");
-                currentProduct.setImage(img);
-            }
-            currentProduct.setName(pr.getName());
-            currentProduct.setPrice(pr.getPrice());
-            currentProduct.setQuantity(pr.getQuantity());
-            currentProduct.setDetailDesc(pr.getDetailDesc());
-            currentProduct.setFactory(pr.getFactory());
-            currentProduct.setTarget(pr.getTarget());
-
-            this.productService.createProduct(currentProduct);
-
-        }
-        return "redirect:/admin/product";
-    }=======>>>>>>>1e88762(init)>>>>>>>26f b06ea67b696853ab5441d14377c072f8cfea7
 }

@@ -1,8 +1,10 @@
 package vn.hoidanit.laptopshop.domain;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.List;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,6 +12,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 
 @Entity
@@ -31,6 +34,9 @@ public class Order implements Serializable {
 
     private String status;
 
+    @Column(name = "created_at")
+    private LocalDate createdAt;
+
     // user id
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -38,6 +44,11 @@ public class Order implements Serializable {
 
     @OneToMany(mappedBy = "order")
     private List<OrderDetail> orderDetails;
+
+    @PrePersist
+    protected void onCreate() {
+        createdAt = LocalDate.now();
+    }
 
     public long getId() {
         return id;
@@ -85,6 +96,14 @@ public class Order implements Serializable {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public LocalDate getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDate createdAt) {
+        this.createdAt = createdAt;
     }
 
     public User getUser() {

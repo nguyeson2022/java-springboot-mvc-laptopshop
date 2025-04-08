@@ -3,14 +3,7 @@ package vn.hoidanit.laptopshop.domain;
 import java.io.Serializable;
 import java.util.List;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 
 @Entity
@@ -25,12 +18,10 @@ public class Cart implements Serializable {
     @Min(value = 0)
     private int sum;
 
-    // user_id
     @OneToOne()
     @JoinColumn(name = "user_id")
     private User user;
 
-    // cart_detail_id
     @OneToMany(mappedBy = "cart")
     List<CartDetail> cartDetails;
 
@@ -65,15 +56,4 @@ public class Cart implements Serializable {
     public void setCartDetails(List<CartDetail> cartDetails) {
         this.cartDetails = cartDetails;
     }
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    public static long getSerialversionuid() {
-        return serialVersionUID;
-    }
-
-=======
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 }

@@ -1,14 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<<<<<<< HEAD
         <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-=======
-<<<<<<< HEAD
-        <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-=======
-        <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
             <html lang="en">
 
             <head>
@@ -24,26 +16,10 @@
                     rel="stylesheet">
 
                 <!-- Icon Font Stylesheet -->
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                <link rel="stylesheet"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
-                    rel="stylesheet">
-
-
-=======
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
                     rel="stylesheet">
 
-<<<<<<< HEAD
-=======
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                 <!-- Libraries Stylesheet -->
                 <link href="/client/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
                 <link href="/client/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -55,12 +31,6 @@
                 <!-- Template Stylesheet -->
                 <link href="/client/css/style.css" rel="stylesheet">
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            </head>
-=======
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                 <meta name="_csrf" content="${_csrf.token}" />
                 <!-- default header name is X-CSRF-TOKEN -->
                 <meta name="_csrf_header" content="${_csrf.headerName}" />
@@ -78,10 +48,6 @@
                     overflow: hidden;
                 }
             </style>
-<<<<<<< HEAD
-=======
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 
             <body>
 
@@ -92,21 +58,6 @@
                 </div>
                 <!-- Spinner End -->
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-                <jsp:include page="../layout/header.jsp" />
-
-
-
-
-
-
-                <jsp:include page="../layout/banner.jsp" />
-
-=======
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                 <jsp:include page="../layout/header.jsp" />
 
 
@@ -115,10 +66,6 @@
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                 <!-- Fruits Shop Start-->
                 <div class="container-fluid fruite py-5">
                     <div class="container py-5">
@@ -130,48 +77,10 @@
                                 <div class="col-lg-8 text-end">
                                     <ul class="nav nav-pills d-inline-flex text-center mb-5">
                                         <li class="nav-item">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                                            <a class="d-flex m-2 py-2 bg-light rounded-pill active"
-                                                data-bs-toggle="pill" href="#tab-1">
-                                                <span class="text-dark" style="width: 130px;">All Products</span>
-                                            </a>
-                                        </li>
-                                        <!-- <li class="nav-item">
-                                        <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill"
-                                            href="#tab-2">
-                                            <span class="text-dark" style="width: 130px;">Vegetables</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill"
-                                            href="#tab-3">
-                                            <span class="text-dark" style="width: 130px;">Fruits</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill"
-                                            href="#tab-4">
-                                            <span class="text-dark" style="width: 130px;">Bread</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill"
-                                            href="#tab-5">
-                                            <span class="text-dark" style="width: 130px;">Meat</span>
-                                        </a>
-                                    </li> -->
-=======
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                                             <a class="d-flex m-2 py-2 bg-light rounded-pill active" href="/products">
                                                 <span class="text-dark" style="width: 130px;">All Products</span>
                                             </a>
                                         </li>
-<<<<<<< HEAD
-=======
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                                     </ul>
                                 </div>
                             </div>
@@ -184,48 +93,13 @@
                                                     <div class="col-md-6 col-lg-4 col-xl-3">
                                                         <div class="rounded position-relative fruite-item">
                                                             <div class="fruite-img">
-<<<<<<< HEAD
                                                                 <img src="${product.image}"
-=======
-<<<<<<< HEAD
-                                                                <img src="/images/product/${product.image}"
-=======
-                                                                <img src="${product.image}"
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                                                                     class="img-fluid w-100 rounded-top" alt="">
                                                             </div>
                                                             <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
                                                                 style="top: 10px; left: 10px;">Laptop</div>
                                                             <div
                                                                 class="p-4 border border-secondary border-top-0 rounded-bottom">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                                                                <h4 style="font-size: 15px;">
-
-                                                                    <a href="/product/${product.id}">${product.name}</a>
-                                                                </h4>
-                                                                <p style="font-size: 13px;">${product.shortDesc}</p>
-                                                                <div class="d-flex justify-content-center flex-lg-wrap">
-                                                                    <p style="font-size: 15px; text-align: center; width: 100%;"
-                                                                        class="text-dark fw-bold mb-3">
-                                                                        <fmt:formatNumber type="number"
-                                                                            value="${product.price}" /> đ
-                                                                    </p>
-                                                                    <form method="post"
-                                                                        action="/add-product-to-cart/${product.id}">
-                                                                        <input type="hidden"
-                                                                            name="${_csrf.parameterName}"
-                                                                            value="${_csrf.token}" />
-                                                                        <button href="#"
-                                                                            class="mx-auto btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                                                class="fa fa-shopping-bag me-2 text-primary"></i>
-                                                                            Add to
-                                                                            cart</button>
-                                                                    </form>
-=======
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                                                                 <h4 style="font-size: 15px;" class="truncate-multiline">
                                                                     <a href=" /product/${product.id}">
                                                                         ${product.name}
@@ -254,10 +128,6 @@
                                                                         Add to cart
                                                                     </button>
                                                                     <!-- </form> -->
-<<<<<<< HEAD
-=======
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -267,45 +137,17 @@
                                         </div>
                                     </div>
                                 </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Fruits Shop End-->
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                <jsp:include page="../layout/feature.jsp" />
-
-
-
-
-
-
-
-                <jsp:include page="../layout/footer.jsp" />
-
-
-
-=======
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 
                 <jsp:include page="../layout/feature.jsp" />
 
                 <jsp:include page="../layout/footer.jsp" />
 
 
-<<<<<<< HEAD
-=======
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                 <!-- Back to Top -->
                 <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i
                         class="fa fa-arrow-up"></i></a>
@@ -321,16 +163,8 @@
 
                 <!-- Template Javascript -->
                 <script src="/client/js/main.js"></script>
-<<<<<<< HEAD
                 <script
                     src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
-=======
-<<<<<<< HEAD
-=======
-                <script
-                    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
             </body>
 
             </html>

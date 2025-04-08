@@ -1,20 +1,14 @@
 package vn.hoidanit.laptopshop.domain;
 
-<<<<<<< HEAD
 import java.io.Serializable;
 
-=======
-<<<<<<< HEAD
-=======
-import java.io.Serializable;
-
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.PrePersist;
+import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Min;
@@ -23,20 +17,10 @@ import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "products")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-public class Product {
-=======
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 public class Product implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-<<<<<<< HEAD
-=======
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -48,26 +32,12 @@ public class Product implements Serializable {
     @NotNull
     @DecimalMin(value = "0", inclusive = false, message = "Price phải lớn hơn 0")
     private double price;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     private String image;
 
     @NotNull
     @NotEmpty(message = "detailDesc không được để trống")
     @Column(columnDefinition = "MEDIUMTEXT")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     private String detailDesc;
 
     @NotNull
@@ -76,20 +46,14 @@ public class Product implements Serializable {
 
     @NotNull
     @Min(value = 1, message = "Số lượng cần lớn hơn hoặc bằng 1")
-<<<<<<< HEAD
-    private int quantity;
-
-=======
-<<<<<<< HEAD
     private long quantity;
-=======
-    private int quantity;
 
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
     private long sold;
     private String factory;
     private String target;
+
+    @Column(name = "keyword", columnDefinition = "TEXT")
+    private String keyword;
 
     public long getId() {
         return id;
@@ -139,25 +103,11 @@ public class Product implements Serializable {
         this.shortDesc = shortDesc;
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     public long getQuantity() {
         return quantity;
     }
 
     public void setQuantity(long quantity) {
-=======
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-<<<<<<< HEAD
-=======
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
         this.quantity = quantity;
     }
 
@@ -185,11 +135,33 @@ public class Product implements Serializable {
         this.target = target;
     }
 
+    public String getKeyword() {
+        return keyword;
+    }
+
+    public void setKeyword(String keyword) {
+        this.keyword = keyword;
+    }
+
+    @PrePersist
+    @PreUpdate
+    public void generateKeyword() {
+        StringBuilder keywordBuilder = new StringBuilder();
+        keywordBuilder.append(this.name.toLowerCase())
+                .append(" ")
+                .append(this.factory.toLowerCase())
+                .append(" ")
+                .append(this.target.toLowerCase())
+                .append(" ")
+                .append(this.shortDesc.toLowerCase());
+        this.keyword = keywordBuilder.toString();
+    }
+
     @Override
     public String toString() {
         return "Product [id=" + id + ", name=" + name + ", price=" + price + ", image=" + image + ", detailDesc="
                 + detailDesc + ", shortDesc=" + shortDesc + ", quantity=" + quantity + ", sold=" + sold + ", factory="
-                + factory + ", target=" + target + "]";
+                + factory + ", target=" + target + ", keyword=" + keyword + "]";
     }
 
 }

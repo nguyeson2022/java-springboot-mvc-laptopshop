@@ -1,15 +1,7 @@
 package vn.hoidanit.laptopshop.domain;
 
-<<<<<<< HEAD
 import java.io.Serializable;
 
-=======
-<<<<<<< HEAD
-=======
-import java.io.Serializable;
-
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,19 +12,9 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "order_detail")
-<<<<<<< HEAD
 public class OrderDetail implements Serializable {
 
     private static final long serialVersionUID = 1L;
-=======
-<<<<<<< HEAD
-public class OrderDetail {
-=======
-public class OrderDetail implements Serializable {
-
-    private static final long serialVersionUID = 1L;
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

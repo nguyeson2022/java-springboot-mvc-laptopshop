@@ -2,27 +2,6 @@
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
         <!-- Navbar start -->
         <div class="container-fluid fixed-top">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            <!-- <div class="container topbar bg-primary d-none d-lg-block">
-        <div class="d-flex justify-content-between">
-            <div class="top-info ps-2">
-                <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#"
-                        class="text-white">123 Street, New York</a></small>
-                <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#"
-                        class="text-white">Email@Example.com</a></small>
-            </div>
-            <div class="top-link pe-2">
-                <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
-                <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small>/</a>
-                <a href="#" class="text-white"><small class="text-white ms-2">Sales and Refunds</small></a>
-            </div>
-        </div>
-    </div> -->
-=======
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
             <div class="container px-0">
                 <nav class="navbar navbar-light bg-white navbar-expand-xl">
                     <a href="/" class="navbar-brand">
@@ -36,48 +15,15 @@
                         <div class="navbar-nav">
                             <a href="/" class="nav-item nav-link active">Trang Chủ</a>
                             <a href="/products" class="nav-item nav-link">Sản Phẩm</a>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                            <!-- <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                            <a href="cart.html" class="dropdown-item">Cart</a>
-                            <a href="chackout.html" class="dropdown-item">Chackout</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Page</a>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a> -->
-                        </div>
-                        <div class="d-flex m-3 me-0">
-                            <c:if test="${not empty pageContext.request.userPrincipal}">
-
-
-=======
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
 
                         </div>
                         <div class="d-flex m-3 me-0">
                             <c:if test="${not empty pageContext.request.userPrincipal}">
-<<<<<<< HEAD
-=======
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                                 <a href="/cart" class="position-relative me-4 my-auto">
                                     <i class="fa fa-shopping-bag fa-2x"></i>
                                     <span
                                         class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1"
-<<<<<<< HEAD
                                         style="top: -5px; left: 15px; height: 20px; min-width: 20px;" id="sumCart">
-=======
-<<<<<<< HEAD
-                                        style="top: -5px; left: 15px; height: 20px; min-width: 20px;">
-=======
-                                        style="top: -5px; left: 15px; height: 20px; min-width: 20px;" id="sumCart">
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                                         ${sessionScope.sum}
                                     </span>
                                 </a>
@@ -94,28 +40,12 @@
                                                 src="/images/avatar/${sessionScope.avatar}" />
                                             <div class="text-center my-3">
                                                 <c:out value="${sessionScope.fullName}" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                                             </div>
                                         </li>
 
                                         <li><a class="dropdown-item" href="#">Quản lý tài khoản</a></li>
-<<<<<<< HEAD
 
                                         <li><a class="dropdown-item" href="/order-history">Lịch sử mua hàng</a></li>
-=======
-<<<<<<< HEAD
-                                        <li><a class="dropdown-item" href="#">Lịch sử mua hàng</a></li>
-=======
-
-                                        <li><a class="dropdown-item" href="/order-history">Lịch sử mua hàng</a></li>
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>
@@ -123,22 +53,6 @@
                                             <form method="post" action="/logout">
                                                 <input type="hidden" name="${_csrf.parameterName}"
                                                     value="${_csrf.token}" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                                                <button class="dropdown-item">Đăng xuất</a>
-                                            </form>
-
-                                        </li>
-                                    </ul>
-
-
-                                </div>
-                            </c:if>
-                            <c:if test="${ empty pageContext.request.userPrincipal}">
-                                <a href="/login" class="position-relative me-4 my-auto">Đăng nhập</a>
-=======
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                                                 <button class="dropdown-item">Đăng xuất</button>
                                             </form>
                                         </li>
@@ -149,10 +63,6 @@
                                 <a href="/login" class="a-login position-relative me-4 my-auto">
                                     Đăng nhập
                                 </a>
-<<<<<<< HEAD
-=======
->>>>>>> 1e88762 (init)
->>>>>>> 26fb06ea67b696853ab5441d14377c072f8cfea7
                             </c:if>
                         </div>
                     </div>
