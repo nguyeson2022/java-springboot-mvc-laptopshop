@@ -3,7 +3,7 @@
 Template này được sử dụng cho series Java Spring MVC (dự án laptopshop) của tác giả Sơn IT 
 
 ## Về tác giả
-Mọi thông tin về Tác giả Hỏi Dân IT, các bạn có thể tìm kiếm tại đây:
+
 
 Facebook “Nguyễn Sơn” : https://www.facebook.com/son16102004
 
